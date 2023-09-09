@@ -72,7 +72,7 @@ def show_title_details(title_data):
     details_window = tk.Toplevel(root)
     details_window.title(title_data['title'])
 
-    # Add widgets to display detailed information about the title in the details window
+    # Widgets to display detailed information about the title in the details window
     detail_labels = [
         f"Type: {title_data['type']}",
         f"Title: {title_data['title']}",
@@ -94,7 +94,7 @@ def show_title_details(title_data):
 def on_title_click(title_data):
     show_title_details(title_data)
 
-# Create the main window
+# Main window
 root = tk.Tk()
 root.title("Netflix Recommendation App")
 
@@ -107,7 +107,7 @@ x = (screen_width - window_width) // 2
 y = (screen_height - window_height) // 2
 root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
-# Create a frame for organizing GUI elements
+# Create a frame 
 frame = tk.Frame(root)
 frame.pack(pady=20)
 
@@ -130,7 +130,6 @@ results_label.grid(row=3, column=0, columnspan=4, pady=10)
 # Button to go back to the search screen
 back_button = tk.Button(frame, text="Back to Search", command=back_to_search, height=2, width=15)
 
-# Configure additional alignment and anchors
 frame.columnconfigure(0, weight=1)
 frame.columnconfigure(1, weight=1)
 frame.columnconfigure(2, weight=1)
